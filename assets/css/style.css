@@ -493,12 +493,12 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #aaa!important;
+  color: #C00B0B!important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #aaa!important;
+  color: #C00B0B!important;
   opacity: 1;
 }
 
@@ -560,7 +560,7 @@ header
 
 .header-area .main-nav .nav li.submenu ul li a:hover {
   background: #fff;
-  color: #aaa!important;
+  color: #C00B0B!important;
   padding-left: 25px;
 }
 
@@ -700,7 +700,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #aaa;
+  color: #C00B0B;
 }
 
 @media (max-width: 1200px) {
@@ -719,7 +719,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #aaa!important;
+    color: #C00B0B!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -777,7 +777,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #aaa!important;
+    color: #C00B0B!important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -1442,7 +1442,7 @@ Explore
 
 #explore .left-content span {
   font-size: 14px;
-  color: #aaaaaa;
+  color: #C00B0Baaa;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -1467,7 +1467,7 @@ Explore
 
 #explore .left-content p {
   font-size: 14px;
-  color: #aaaaaa;
+  color: #C00B0Baaa;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -1518,7 +1518,7 @@ Explore
 #explore .types span {
   font-size: 14px;
   font-style: italic;
-  color: #aaa;
+  color: #C00B0B;
   font-weight: 500;
 }
 
@@ -1615,7 +1615,7 @@ Subscribe
   font-size: 14px;
   font-style: italic;
   font-weight: 500;
-  color: #aaa;
+  color: #C00B0B;
   border-radius: 0px;
   border: 1px solid #7a7a7a;
   box-shadow: none;
@@ -1660,7 +1660,7 @@ Subscribe
 .subscribe ul li span a {
   font-size: 14px;
   font-weight: 400;
-  color: #aaa;
+  color: #C00B0B;
 }
 
 .subscribe ul li span a:hover {
@@ -1696,7 +1696,7 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-  color: #aaa;
+  color: #C00B0B;
 }
 
 footer h4 {
@@ -1989,7 +1989,7 @@ Single Product Page
 
 #product .right-content span {
   font-size: 14px;
-  color: #aaaaaa;
+  color: #C00B0Baaa;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -2014,7 +2014,7 @@ Single Product Page
 
 #product .right-content p {
   font-size: 14px;
-  color: #aaaaaa;
+  color: #C00B0Baaa;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -2043,7 +2043,7 @@ Single Product Page
   padding-top: 7px;
   font-size: 20px;
   font-weight: 700;
-  color: #aaa;
+  color: #C00B0B;
   position: relative;
   z-index: 11;
 }
@@ -2052,7 +2052,7 @@ Single Product Page
   float: left;
   font-size: 20px;
   margin-top: 10px;
-  color: #aaa!important;
+  color: #C00B0B!important;
 }
 
 .total .main-border-button {
@@ -2160,7 +2160,7 @@ About Us Page
 
 .about-us .right-content span {
   font-size: 14px;
-  color: #aaaaaa;
+  color: #C00B0Baaa;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -2185,7 +2185,7 @@ About Us Page
 
 .about-us .right-content p {
   font-size: 14px;
-  color: #aaaaaa;
+  color: #C00B0Baaa;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -2379,7 +2379,7 @@ contact Us Page
   font-size: 14px;
   font-style: italic;
   font-weight: 500;
-  color: #aaa;
+  color: #C00B0B;
   border-radius: 0px;
   border: 1px solid #7a7a7a;
   box-shadow: none;
@@ -2402,7 +2402,7 @@ contact Us Page
   font-size: 14px;
   font-style: italic;
   font-weight: 500;
-  color: #aaa;
+  color: #C00B0B;
   border-radius: 0px;
   border: 1px solid #7a7a7a;
   box-shadow: none;
