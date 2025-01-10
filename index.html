@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Dawn Athletics</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <style>
+      
+    /* Section Container */
+    .sectionn {
+      display: flex;
+      align-items: stretch; /* Ensures equal height */
+      justify-content: space-between;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 500px; /* Fixed height for the section */
+    }
+
+    /* Left Content */
+    .contentt {
+      flex: 1;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Vertically center content */
+    }
+
+    .contentt h2 {
+      font-size: 2rem;
+      color: #ff5500;
+      margin-bottom: 1rem;
+    }
+
+    .contentt p {
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    /* Right Image */
+    .image-container {
+      flex: 1;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-container img {
+      width: 90%;  /* Set width to fill the container */
+      height: 90%; /* Set height to match content and image */
+      object-fit: cover; /* Ensures the image covers the space */
+      border-radius: 5px;
+    }
+
+    /* Icon Container */
+    .icon-container {
+      display: flex;
+      justify-content: center;  /* Center align icons */
+      gap: 2rem;
+      padding: 4rem 2rem;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .icon-item {
+      text-align: center;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 150px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .icon-item i {
+      font-size: 50px;
+      color: #4CAF50;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .icon-item p {
+      font-size: 16px;
+      color: #333;
+      font-weight: bold;
+      margin: 0;
+      text-align: center;
+    }
+
+    .icon-item:hover i {
+      color: #ff5500; /* Change icon color on hover */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .section {
+        flex-direction: column;
+        height: auto;  /* Remove fixed height on smaller screens */
+        padding: 3rem 2rem; /* Adjust padding for better mobile layout */
+      }
+
+      .content {
+        padding: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .content h2 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+      }
+
+      .content p {
+        font-size: 1rem; /* Slightly smaller font for mobile */
+      }
+
+      .image-container {
+        margin-top: 2rem;
+        width: 100%;
+        height: auto; /* Ensure image container adjusts well */
+      }
+
+      .image-container img {
+        width: 100%; /* Adjust image to 100% width on smaller screens */
+        height: auto; /* Keep the aspect ratio */
+        object-fit: contain; /* Ensure the image remains fully visible */
+      }
+
+      .icon-container {
+        gap: 1rem;
+      }
+
+      .icon-item {
+        width: 120px;
+        height: auto;
+        padding: 20px 10px;
+      }
+
+      .icon-item i {
+        font-size: 40px;
+      }
+    }
+
+    /* Further adjustment for smaller screens (mobile phones) */
+    @media (max-width: 480px) {
+      .section {
+        padding: 2rem 1rem; /* Reduce padding on mobile devices */
+      }
+
+      .content h2 {
+        font-size: 1.5rem; /* Adjust heading size further */
+        margin-bottom: 0.75rem;
+      }
+
+      .content p {
+        font-size: 0.95rem; /* Adjust text size */
+      }
+
+      .icon-container {
+        gap: 1rem;
+        padding: 2rem 1rem;
+      }
+
+      .icon-item {
+        width: 100px;
+        padding: 15px;
+      }
+
+      .icon-item i {
+        font-size: 35px;
+      }
+
+      .icon-item p {
+        font-size: 14px;
+      }
+    }
+/* icon css ends */
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #4CAF50;
+        }
+
+        .calories-container {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 20px;
+            flex-wrap: wrap;
+            overflow: hidden;
+            align-items: center;
+        }
+
+        .activity-card {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            width: 180px;
+            height: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .activity-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .activity-icon {
+            font-size: 60px;
+            color: #4CAF50;
+            transition: color 0.3s ease;
+        }
+
+        .activity-card:hover .activity-icon {
+            color: #FF5733;
+        }
+
+        .activity-name {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .calories {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+        .activity-card:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media screen and (max-width: 768px) {
+            .calories-container {
+                justify-content: center;
+            }
+
+            .activity-card {
+                width: 150px;
+                height: 200px;
+            }
+
+            .activity-icon {
+                font-size: 50px;
+            }
+
+            .activity-name {
+                font-size: 1.2rem;
+            }
+
+            .calories {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .calories-container {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .activity-card {
+                width: 130px;
+                height: 180px;
+            }
+
+            .activity-icon {
+                font-size: 40px;
+            }
+
+            .activity-name {
+                font-size: 1rem;
+            }
+
+            .calories {
+                font-size: 0.9rem;
+            }
+        }
+        /* calories code ends */
+
+        /* product div  */
+        .product-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 15px;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel img {
+            width: 200px; /* increase image size */
+            height: 200px; /* increase image size */
+            object-fit: contain; /* ensure the full image is visible */
+            border: 3px dotted #333; /* dotted border with color */
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .carousel img:hover {
+            transform: scale(1.1);
+        }
+
+        .arrow {
+            font-size: 2rem;
+            color: #333;
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+            padding: 5px;
+        }
+
+        .arrow:disabled {
+            color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            width: 100%;
+        }
+    </style>
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo" style="color: black;">
+                            Dawon Athletics
+                        </a>
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="products.html">Products</a></li>
+                            <li class="scroll-to-section"><a href="guide.html">Guide</a></li>
+                            <li class="scroll-to-section"><a href="contact.html">Contact us</a></li>
+                            <li class="scroll-to-section"><a href="login.html"><i class="fa fa-paper-plane"></i></a></li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+     
+    <div class="page-heading about-page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>Bounce Into Better Health</h2>
+                        <span>There are countless styles of ropes available.</span>
+                        <div class="main-border-button" style="margin-top: 2%;">
+                            <a href="products.html">Purchase Now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ***** Men Area Starts ***** -->
+    <section class="section" id="men">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Our Latest Products</h2>
+                        <span>Strength in Every Swing: Premium Ropes for a Healthier You.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="men-item-carousel">
+                        <div class="owl-men-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/Images/DSC00567 copy.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Beast Ropes</h4>
+                                    <span>$120.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/Images/DSC00567 copy.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Beast Ropes</h4>
+                                    <span>$90.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/Images/DSC00567 copy.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Beast Ropes</h4>
+                                    <span>$150.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="assets/images/Images/DSC00567 copy.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Beast Ropes</h4>
+                                    <span>$120.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="products">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Our Latest Products</h2>
+                        <span>Check out all of our products.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" id="product-list">
+                <!-- Products will be dynamically injected here -->
+            </div>
+            <div class="text-center mt-4" id="view-all-btn-container">
+                <button class="btn btn-primary" id="view-all-btn" onclick="showAllProducts()">View All Products</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="product" style="display: none;">
+        <div class="container">
+            <div class="row" id="product-container">
+                <!-- Dynamic product details will be injected here -->
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function getCart() {
+            const cart = localStorage.getItem('cart');
+            return cart ? JSON.parse(cart) : [];
+        }
+    
+        function saveCart(cart) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    
+        function addToCart(product) {
+            let cart = getCart();
+            cart.push(product);
+            saveCart(cart);
+            alert(product.p_name + ' has been added to the cart!');
+            window.location.href = 'cart.html';
+        }
+    
+        async function fetchProducts() {
+            try {
+                const response = await fetch("http://localhost:8888/dawnapi/getmainproducts");
+                const products = await response.json();
+    
+                const productList = document.getElementById("product-list");
+                productList.innerHTML = "";
+    
+                // Limit to 3 products initially
+                const initialProducts = products.slice(0, 3);
+    
+                initialProducts.forEach((product) => {
+                    const filledStars = Array(product.rating).fill('<li><i class="fa fa-star"></i></li>').join("");
+    
+                    const productHtml = `
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="thumb">
+                                <div class="hover-content">
+                                    <ul>
+                                        <li><a href="#" onclick="navigateToProduct('${product.p_name}')"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                                <img src="${product.file_link}" alt="${product.p_name}">
+                            </div>
+                            <div class="down-content">
+                                <h4>${product.p_name}</h4>
+                                <span>$${product.price}</span>
+                                <ul class="stars">
+                                    ${filledStars}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>`;
+                    productList.innerHTML += productHtml;
+                });
+    
+                // Store the remaining products for later use
+                window.remainingProducts = products.slice(3);
+    
+                // Hide "View All" button if there are no remaining products
+                if (window.remainingProducts.length === 0) {
+                    document.getElementById('view-all-btn-container').style.display = 'none';
+                }
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            }
+        }
+    
+        function showAllProducts() {
+            const productList = document.getElementById("product-list");
+    
+            window.remainingProducts.forEach((product) => {
+                const filledStars = Array(product.rating).fill('<li><i class="fa fa-star"></i></li>').join("");
+    
+                const productHtml = `
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                                <ul>
+                                    <li><a href="#" onclick="navigateToProduct('${product.p_name}')"><i class="fa fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                            <img src="${product.file_link}" alt="${product.p_name}">
+                        </div>
+                        <div class="down-content">
+                            <h4>${product.p_name}</h4>
+                            <span>$${product.price}</span>
+                            <ul class="stars">
+                                ${filledStars}
+                            </ul>
+                        </div>
+                    </div>
+                </div>`;
+                productList.innerHTML += productHtml;
+            });
+    
+            // Hide the "View All" button after all products are shown
+            document.getElementById('view-all-btn-container').style.display = 'none';
+        }
+    
+        async function showProductDetails(p_name) {
+            try {
+                const response = await fetch('http://localhost:8888/dawnapi/getsubproducts');
+                const products = await response.json();
+    
+                const container = document.getElementById('product-container');
+                const productSection = document.getElementById('product');
+    
+                const selectedProduct = products.find(product => product.p_name === p_name);
+                if (!selectedProduct) {
+                    console.error('Product not found:', p_name);
+                    return;
+                }
+    
+                const {
+                    file_link, price, rating, description, p_description, contents, file_link1: sizechart, shipping
+                } = selectedProduct;
+    
+                const parsedPrice = parseFloat(price);
+                const stars = Array(rating).fill('<li><i class="fa fa-star"></i></li>').join('');
+    
+                container.innerHTML = `<div class="col-lg-8">
+                    <div class="left-images">
+                        <img src="${file_link}" alt="Product Image">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="right-content">
+                        <h4>${p_name}</h4>
+                        <span class="price">$${parsedPrice.toFixed(2)}</span>
+                        <ul class="stars">
+                            ${stars}
+                        </ul>
+                        <span>${description}</span>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</p>
+                        </div>
+    
+                        <div class="accordion-container">
+                            <div class="accordion">
+                                <div class="accordion-header" onclick="toggleAccordion(this)">
+                                    <h5>Product Description</h5>
+                                    <span class="toggle-icon" style="font-size: x-large;">+</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>${p_description}</p>
+                                </div>
+                            </div>
+    
+                            <div class="accordion">
+                                <div class="accordion-header" onclick="toggleAccordion(this)">
+                                    <h5>Contents</h5>
+                                    <span class="toggle-icon" style="font-size: x-large;">+</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>${contents}</p>
+                                </div>
+                            </div>
+    
+                            <div class="accordion">
+                                <div class="accordion-header" onclick="toggleAccordion(this)">
+                                    <h5>Size Chart</h5>
+                                    <span class="toggle-icon" style="font-size: x-large;">+</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <img src="${sizechart}" alt="Size Chart" style="max-width: 100%; height: auto;">
+                                </div>
+                            </div>
+    
+                            <div class="accordion">
+                                <div class="accordion-header" onclick="toggleAccordion(this)">
+                                    <h5>Shipping Details</h5>
+                                    <span class="toggle-icon" style="font-size: x-large;">+</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>${shipping}</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="quantity-content">
+                            <div class="left-content">
+                                <h6>No. of Orders</h6>
+                            </div>
+                            <div class="right-content">
+                                <div class="quantity buttons-added">
+                                    <input type="button" value="-" class="minus" onclick="updateQuantity(-1, ${parsedPrice})">
+                                    <input type="number" step="1" min="1" value="1" title="Qty" class="input-text qty text">
+                                    <input type="button" value="+" class="plus" onclick="updateQuantity(1, ${parsedPrice})">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4 id="total-price">Total: $${parsedPrice.toFixed(2)}</h4>
+                            <div class="main-border-button"><a href="#" onclick='addToCart(${JSON.stringify(selectedProduct)})'>Add To Cart</a></div>
+                        </div>
+                    </div>
+                </div>`;
+    
+                document.getElementById('products').style.display = 'none';
+                productSection.style.display = 'block';
+            } catch (error) {
+                console.error('Error showing product details:', error);
+            }
+        }
+    
+        function navigateToProduct(p_name) {
+            history.pushState({ view: 'product', p_name }, '', '#product');
+            showProductDetails(p_name);
+        }
+    
+        window.onpopstate = (event) => {
+            if (event.state && event.state.view === 'product') {
+                showProductDetails(event.state.p_name);
+            } else {
+                document.getElementById('product').style.display = 'none';
+                document.getElementById('products').style.display = 'block';
+            }
+        };
+    
+        fetchProducts();
+    </script>     
+
+    <!-- ***** Explore Area Starts ***** -->
+    <section class="section" id="explore">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <h2>Why Choose Us</h2>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i><p>Because You Deserve Quality, Innovation, and Results—Every Single Time.</p>
+                        </div>
+                        <p>Dawon Athletics™ where fitness Regime meets it destiny. Spawning the new era of High Quality Jump Ropes & its Accessories. One stop solution for all your jump rope needs. We are the only company in India to introduce its first of his kind “Interchangeable Jump Rope” Designed, Developed, Tested in India. In the recent past Interchangeable ropes has revolutionized the jump rope industry Cardio training & Strength training are always virulent nemeses, Any workout can blend these?</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <!-- <div class="col-lg-6">
+                                <div class="leather">
+                                    <h4>Best Ropes</h4>
+                                    <span>Latest Collection</span>
+                                </div>
+                            </div> -->
+                            <div class="col-lg-12">
+                                <div class="first-image">
+                                    <img src="image/DSC00500 copy.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- product starts  -->
+     <br />
+    <div class="product-gallery">
+      <h2 class="heading">Keep shopping your loved categories</h2>
+      <div class="carousel-wrapper">
+          <button class="arrow left-arrow" onclick="scrollLeft()">&#8592;</button>
+          <div class="carousel" id="carousel">
+             <img src="./image/DSC00498 copy.jpg" alt="">
+             <img src="./image/DSC00499 copy.jpg" alt="">
+             <img src="./image/DSC00500 copy.jpg" alt="">
+             <img src="./image/DSC00501.jpg" alt="">
+             <img src="./image/DSC00507 copy.jpg" alt="">
+             <img src="./image/DSC00509 copy.jpg" alt="">
+             <img src="./image/DSC00512 copy.jpg" alt="">
+             <!-- <img src="./image/DSC00541 copy 2.jpg" alt=""> -->
+             <img src="./image/DSC00545 copy 2.jpg" alt="">
+             <img src="./image/DSC00547 copy 2.jpg" alt="">
+             <img src="./image/DSC00548 copy 2.jpg" alt="">
+             <img src="./image/DSC00555 copy 2.jpg" alt="">
+             <img src="./image/DSC00562 copy 2.jpg" alt="">
+             <!-- <img src="./image/why.png" alt="Dawon Athletics Jump Rope and Accessories"> -->
+          </div>
+          <button class="arrow right-arrow" onclick="scrollRight()">&#8594;</button>
+      </div>
+    </div>
+    
+    <script>
+      const carousel = document.getElementById('carousel');
+    
+      function scrollLeft() {
+          carousel.scrollBy({
+              left: -200,
+              behavior: 'smooth'
+          });
+      }
+    
+      function scrollRight() {
+          carousel.scrollBy({
+              left: 200,
+              behavior: 'smooth'
+          });
+      }
+    </script>
+
+<section class="our-services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            </div>
+            <div class="col-lg-3">
+                <div class="service-item">
+                    <!-- <h4>100%               Authentic</h4> -->
+                    <img src="image/OIP.webp" alt="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="service-item">
+                    <!-- <h4>Secure Shopping</h4> -->
+                    <img src="image/secure.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="service-item">
+                    <!-- <h4>Express Shipping</h4> -->
+                    <img src="image/express.webp" alt="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="service-item">
+                    <!-- <h4>Customer Services</h4> -->
+                    <img src="image/customer.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-services">
+    <div class="container">
+<div class="col-lg-12" style="text-align: center;">
+    <div class="section-heading">
+        <h2>Calories burn per hour</h2>
+        <!-- <span>Details to details is what makes Hexashop different from the other themes.</span> -->
+    </div>
+</div>
+        <div class="row">
+            <div class="col-lg-12">
+            </div>
+            <div class="col-lg-3">
+                <div class="service-item">
+                    <h4>300 Calories</h4>
+                    <img src="image/walking.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="service-item">
+                    <h4>550 Calories</h4>
+                    <img src="image/swimming.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="service-item">
+                    <h4>600 Calories</h4>
+                    <img src="image/Jogging.webp" alt="">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="service-item">
+                    <h4>700 Calories</h4>
+                    <img src="image/Cycling.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="first-item">
+                        <div class="logo" style="color: white;">
+                             <h4>Dawn Atheletics</h4>
+                        </div>
+                        <ul>
+                            <li><a href="#">SF. NO. 4/1, NANDHAVANAM PHASE-4,
+                                PERUMAL KOVIL BACK SIDE, GOKULNAGAR,
+                                HOSUR, KRISHNAGIRI - 635109
+                                TAMILNADU INDIA</a></li>
+                            <li style="color: #fff;">Mail Us: <a href="#">sales@dawonathletics.com</a></li>
+                            <li style="color: #fff;">Call Us: <a href="#">+91 8056356548</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="guide.html">Guide</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="products.html">A Star Weighted Jump Ropes</a></li>
+                        <li><a href="products.html">Speed Jump Ropes</a></li>
+                        <li><a href="products.html">Beast Ropes</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2025  Dawn Atheletics, All Rights Reserved. 
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/slick.js"></script> 
+    <script src="assets/js/lightbox.js"></script> 
+    <script src="assets/js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
+</html>

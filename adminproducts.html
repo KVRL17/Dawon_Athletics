@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title></title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <style>
+        .accordion-container {
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+          font-family: Arial, sans-serif;
+        }
+      
+        .accordion {
+          border: 1px solid #ddd;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          overflow: hidden;
+        }
+      
+        .accordion-header {
+          background-color: #f7f7f7;
+          padding: 5px;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-weight: bold;
+        }
+      
+        .accordion-header:hover {
+          background-color: #e0e0e0;
+        }
+      
+        .toggle-icon {
+          font-size: 58px;
+          transition: transform 0.3s ease;
+        }
+      
+        .accordion-content {
+          display: none;
+          padding: 15px;
+          background-color: #fff;
+          border-top: 1px solid #ddd;
+        }
+      
+        .accordion-content img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+        }
+      
+        .accordion.open .accordion-content {
+          display: block;
+        }
+      
+        .accordion.open .toggle-icon {
+          transform: rotate(45deg);
+        }
+      
+        @media (max-width: 768px) {
+          .accordion-container {
+            padding: 0 15px;
+          }
+        }
+            .logining{
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background: #f7f7f7;
+            }
+            .login-container {
+                width: 300px;
+                padding: 20px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+    
+            .login-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            .form-group {
+                margin-bottom: 15px;
+            }
+    
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+    
+            .form-group input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 14px;
+            }
+    
+            .login-button {
+                width: 100%;
+                padding: 10px;
+                background: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+    
+            .login-button:hover {
+                background: #0056b3;
+            }
+    
+            .error-message {
+                color: red;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+			/* General table styling */
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .responsive-table thead {
+    background-color: #f4f4f4;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .responsive-table thead {
+      display: none; /* Hide table headers for smaller screens */
+    }
+
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .responsive-table tr {
+      margin-bottom: 15px;
+    }
+
+    .responsive-table td {
+      text-align: left;
+      padding-left: 10%;
+      position: relative;
+    }
+
+    .responsive-table td::before {
+      content: attr(data-label); /* Add header text before each cell */
+      position: absolute;
+      left: 10px;
+      width: calc(50% - 20px);
+      font-weight: bold;
+    }
+  }
+  .logining{
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background: #f7f7f7;
+            }
+            .login-container {
+                width: 300px;
+                padding: 20px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+    
+            .login-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            .form-group {
+                margin-bottom: 15px;
+            }
+    
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+    
+            .form-group input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 14px;
+            }
+    
+            .login-button {
+                width: 100%;
+                padding: 10px;
+                background: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+    
+            .login-button:hover {
+                background: #0056b3;
+            }
+    
+            .error-message {
+                color: red;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+  /* General table styling */
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .responsive-table thead {
+    background-color: #f4f4f4;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .responsive-table thead {
+      display: none; /* Hide table headers for smaller screens */
+    }
+
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+      display: block;
+      width: 100%;
+	  text-align: left;
+    }
+
+    .responsive-table tr {
+      margin-bottom: 15px;
+    }
+
+    .responsive-table td {
+      text-align: left;
+      padding-left: 10%;
+      position: relative;
+    }
+
+    .responsive-table td::before {
+      content: attr(data-label); /* Add header text before each cell */
+      position: absolute;
+      left: 10px;
+      width: calc(50% - 20px);
+      font-weight: bold;
+    }
+  }
+  /* Card Styling */
+.contact-us-form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+    width: 90%; /* Ensure responsiveness */
+}
+
+/* Heading and Description */
+.contact-us-form h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #444;
+    text-align: center;
+}
+
+.contact-us-form p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Group Styling */
+.contact-us-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-us-form .form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact-us-form .form-group input,
+.contact-us-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-us-form .form-group input[type="file"] {
+    padding: 3px;
+}
+
+.contact-us-form .form-group textarea {
+    resize: none;
+    height: auto;
+}
+
+/* Image Previews */
+.contact-us-form .form-group img {
+    display: block;
+    margin-top: 10px;
+    width: 100px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.contact-us-form .login-button {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-us-form .login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Error Message */
+.contact-us-form .error-message {
+    font-size: 14px;
+    color: #d9534f;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-us-form {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .contact-us-form h2 {
+        font-size: 20px;
+    }
+
+    .contact-us-form p {
+        font-size: 13px;
+    }
+
+    .contact-us-form .form-group label {
+        font-size: 13px;
+    }
+
+    .contact-us-form .form-group input,
+    .contact-us-form .form-group textarea {
+        font-size: 13px;
+    }
+
+    .contact-us-form .login-button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-us-form {
+        padding: 10px;
+    }
+
+    .contact-us-form h2 {
+        font-size: 18px;
+    }
+
+    .contact-us-form p {
+        font-size: 12px;
+    }
+
+    .contact-us-form .form-group input,
+    .contact-us-form .form-group textarea {
+        font-size: 12px;
+    }
+
+    .contact-us-form .login-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+      </style>
+      <script>
+        const login=localStorage.getItem('isLogin')
+        if(!login){
+            window.location.href = "/htmll.html";
+        }
+        
+    </script>
+    <script>
+        const logout = () =>{
+            localStorage.removeItem('isLogin')
+            window.location.href = "/dawn/index.html";
+        }
+    </script>
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo" style="color: black;">
+                            <h2> Dawon Athletics </h2>
+                        </a>
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="admin.html">Products</a></li>
+                            <li class="scroll-to-section"><a href="adminproducts.html" class="active">Product Description</a></li>
+                            <li class="scroll-to-section"><a onclick="logout()" style="color: #333;">Logout</a></li>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <!-- <h2>Check Our Products</h2> -->
+                        <!-- <span>Explore Our Exclusive Products – Find Your Perfect Match Today!</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-us section">
+        <div class="container">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="contact-us-form">
+                            <h2>Product Description</h2>
+                            <p>Please provide a product name same as which provided in the Product Page</p>
+                            <!-- Form -->
+                            <div class="form-group">
+                                <label for="p_name">Product Name</label>
+                                <input type="text" id="p_name" placeholder="Enter your Product Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Product Price</label>
+                                <input type="text" id="price" placeholder="Enter your Product Price">
+                            </div>
+                            <div class="form-group">
+                                <label for="p_image">Product Image</label>
+                                <input type="file" id="p_image" accept="image/*">
+                                <img id="current-image" src="" alt="Current Image" style="width: 100px; height: auto; display: none; margin-top: 10px;">
+                            </div>
+                            <div class="form-group">
+                                <label for="rating">Product Rating</label>
+                                <input type="number" id="rating" placeholder="Enter your Product Rating">
+                            </div>
+                            <div class="form-group">
+                                <label for="productdescription">Product Short Description</label>
+                                <textarea id="productdescription" placeholder="Enter the product Short Description" rows="7" cols="50"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="productdetaildescription">Product Detail Description</label>
+                                <textarea id="productdetaildescription" placeholder="Enter the product Detail Description" rows="7" cols="50"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="productcontents">Product Contents</label>
+                                <textarea id="productcontents" placeholder="Enter the product Contents" rows="7" cols="50"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="sizechart">Product Size Chart</label>
+                                <input type="file" id="sizechart" accept="image/*">
+                                <img id="current-sizechart" src="" alt="Current Size Chart" style="width: 100px; height: auto; display: none; margin-top: 10px;">
+                            </div>
+                            <div class="form-group">
+                                <label for="productshipping">Product Shipping</label>
+                                <textarea id="productshipping" placeholder="Enter the product Shipping" rows="7" cols="50"></textarea>
+                            </div>
+                            <button class="login-button" onclick="addProduct()">Submit</button>
+                            <div class="error-message" id="error-message"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br />
+    
+    <div class="container">
+        <div class="inner">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 style="text-align: center;">Added Products</h3>
+                    <div class="search-bar" style="margin-bottom: 20px; text-align: center;">
+                        <input type="text" id="search-input" placeholder="Search by Product Name..." style="width: 50%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;" oninput="filterProducts()">
+                    </div>
+                    <div class="product-table">
+                        <table id="productTable" class="responsive-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Product Name</th>
+                                    <th>Product Price</th>
+                                    <th>Image</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    
+    <script>
+    const apiBase = "http://localhost:8888/dawnapi";
+    let allProducts = [];
+    let currentEditingId = null;
+    
+    async function addProduct() {
+        const formData = new FormData();
+        const fileInput = document.getElementById("p_image").files[0];
+        const sizeChart = document.getElementById("sizechart").files[0];
+    
+        formData.append("p_name", document.getElementById("p_name").value);
+        formData.append("price", document.getElementById("price").value);
+        formData.append("rating", document.getElementById("rating").value);
+        formData.append("short_description", document.getElementById("productdescription").value);
+        formData.append("detail_description", document.getElementById("productdetaildescription").value);
+        formData.append("contents", document.getElementById("productcontents").value);
+        formData.append("shipping", document.getElementById("productshipping").value);
+        if (fileInput) formData.append("file", fileInput);
+        if (sizeChart) formData.append("size_chart", sizeChart);
+    
+        try {
+            let url = `${apiBase}/addsubproduct`;
+            let method = "POST";
+    
+            if (currentEditingId) {
+                url = `${apiBase}/updatesubproduct/${currentEditingId}`;
+            }
+    
+            const response = await fetch(url, { method, body: formData });
+            const result = await response.json();
+    
+            if (response.ok) {
+                alert(currentEditingId ? "Product updated successfully!" : "Product added successfully!");
+                currentEditingId = null;
+                resetForm();
+                fetchProducts();
+            } else {
+                alert(`Error: ${result.error}`);
+            }
+        } catch (error) {
+            console.error("Error adding/updating product:", error);
+        }
+    }
+    
+    function resetForm() {
+        document.getElementById("p_name").value = "";
+        document.getElementById("price").value = "";
+        document.getElementById("rating").value = "";
+        document.getElementById("productdescription").value = "";
+        document.getElementById("productdetaildescription").value = "";
+        document.getElementById("productcontents").value = "";
+        document.getElementById("productshipping").value = "";
+        document.getElementById("p_image").value = "";
+        document.getElementById("sizechart").value = "";
+        document.getElementById("current-image").style.display = "none";
+        document.getElementById("current-sizechart").style.display = "none";
+    }
+    
+    async function fetchProducts() {
+        try {
+            const response = await fetch(`${apiBase}/getsubproducts`);
+            const products = await response.json();
+            if (response.ok) {
+                allProducts = products;
+                renderProducts(products);
+            } else {
+                console.error("Error fetching products:", products.error);
+            }
+        } catch (error) {
+            console.error("Error fetching products:", error);
+        }
+    }
+    
+    function renderProducts(products) {
+        const tableBody = document.querySelector("#productTable tbody");
+        tableBody.innerHTML = "";
+    
+        products.forEach(product => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${product.id}</td>
+                <td>${product.p_name}</td>
+                <td>${product.price}</td>
+                <td><img src="${product.file_link}" alt="Product Image" width="100" height="100"></td>
+                <td>
+                    <button onclick="editProduct(${product.id})">Edit</button>
+                    <button onclick="deleteProduct(${product.id})">Delete</button>
+                </td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+    
+    function editProduct(id) {
+        const product = allProducts.find(prod => prod.id === id);
+        if (!product) return alert("Product not found!");
+    
+        currentEditingId = id;
+        document.getElementById("p_name").value = product.p_name;
+        document.getElementById("price").value = product.price;
+        document.getElementById("rating").value = product.rating;
+        document.getElementById("productdescription").value = product.short_description;
+        document.getElementById("productdetaildescription").value = product.detail_description;
+        document.getElementById("productcontents").value = product.contents;
+        document.getElementById("productshipping").value = product.shipping;
+    
+        const currentImage = document.getElementById("current-image");
+        currentImage.src = product.file_link;
+        currentImage.style.display = "block";
+    
+        const currentSizeChart = document.getElementById("current-sizechart");
+        if (product.size_chart_link) {
+            currentSizeChart.src = product.size_chart_link;
+            currentSizeChart.style.display = "block";
+        } else {
+            currentSizeChart.style.display = "none";
+        }
+    
+        document.getElementById("p_image").value = "";
+        document.getElementById("sizechart").value = "";
+        alert(`Editing product: ${product.p_name}`);
+    }
+    
+    async function deleteProduct(id) {
+        if (confirm("Are you sure you want to delete this product?")) {
+            try {
+                const response = await fetch(`${apiBase}/deletesubproduct/${id}`, { method: "GET" });
+                const result = await response.json();
+    
+                if (response.ok) {
+                    alert("Product deleted successfully!");
+                    fetchProducts();
+                } else {
+                    alert(`Error: ${result.error}`);
+                }
+            } catch (error) {
+                console.error("Error deleting product:", error);
+            }
+        }
+    }
+    
+    function filterProducts() {
+        const searchInput = document.getElementById("search-input").value.toLowerCase();
+        const filteredProducts = allProducts.filter(product =>
+            product.p_name.toLowerCase().includes(searchInput)
+        );
+        renderProducts(filteredProducts);
+    }
+    
+    document.addEventListener("DOMContentLoaded", fetchProducts);
+    </script>   
+		
+		<footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="first-item">
+                            <div class="logo" style="color: white;">
+                                 <h4>Dawn Atheletics</h4>
+                            </div>
+                            <ul>
+                                <li><a href="#">SF. NO. 4/1, NANDHAVANAM PHASE-4,
+                                    PERUMAL KOVIL BACK SIDE, GOKULNAGAR,
+                                    HOSUR, KRISHNAGIRI - 635109
+                                    TAMILNADU INDIA</a></li>
+                                <li style="color: #fff;">Mail Us: <a href="#">sales@dawonathletics.com</a></li>
+                                <li style="color: #fff;">Call Us: <a href="#">+91 8056356548</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="guide.html">Guide</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="products.html">A Star Weighted Jump Ropes</a></li>
+                            <li><a href="products.html">Speed Jump Ropes</a></li>
+                            <li><a href="products.html">Beast Ropes</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="under-footer">
+                            <p>Copyright © 2025  Dawn Atheletics, All Rights Reserved. 
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>    
+    
+        <!-- jQuery -->
+        <script src="assets/js/jquery-2.1.0.min.js"></script>
+    
+        <!-- Bootstrap -->
+        <script src="assets/js/popper.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+    
+        <!-- Plugins -->
+        <script src="assets/js/owl-carousel.js"></script>
+        <script src="assets/js/accordions.js"></script>
+        <script src="assets/js/datepicker.js"></script>
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/imgfix.min.js"></script> 
+        <script src="assets/js/slick.js"></script> 
+        <script src="assets/js/lightbox.js"></script> 
+        <script src="assets/js/isotope.js"></script> 
+        
+        <!-- Global Init -->
+        <script src="assets/js/custom.js"></script>
+    
+        <script>
+    
+            $(function() {
+                var selectedClass = "";
+                $("p").click(function(){
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                    $("#portfolio div").not("."+selectedClass).fadeOut();
+                setTimeout(function() {
+                  $("."+selectedClass).fadeIn();
+                  $("#portfolio").fadeTo(50, 1);
+                }, 500);
+                    
+                });
+            });
+    
+        </script>
+    
+      </body>
+    </html>

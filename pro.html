@@ -1,0 +1,211 @@
+<section class="section" id="products">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Our Latest Products</h2>
+                    <span>Check out all of our products.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="product-list">
+            <!-- Products will be dynamically injected here -->
+        </div>
+    </div>
+</section>
+
+<section class="section" id="product" style="display: none;">
+    <div class="container">
+        <div class="row" id="product-container">
+            <!-- Dynamic product details will be injected here -->
+        </div>
+    </div>
+</section>
+
+<script>
+    async function fetchProducts() {
+        try {
+            const response = await fetch("http://localhost:8888/dawnapi/getmainproducts");
+            const products = await response.json();
+
+            const productList = document.getElementById("product-list");
+            productList.innerHTML = "";
+
+            products.forEach((product) => {
+                const filledStars = Array(product.rating).fill('<li><i class="fa fa-star"></i></li>').join("");
+
+                const productHtml = `
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                                <ul>
+                                    <li><a href="#" onclick="navigateToProduct('${product.p_name}')"><i class="fa fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                            <img src="${product.file_link}" alt="${product.p_name}">
+                        </div>
+                        <div class="down-content">
+                            <h4>${product.p_name}</h4>
+                            <span>$${product.price}</span>
+                            <ul class="stars">
+                                ${filledStars}
+                            </ul>
+                        </div>
+                    </div>
+                </div>`;
+                productList.innerHTML += productHtml;
+            });
+        } catch (error) {
+            console.error("Error fetching products:", error);
+        }
+    }
+
+    async function showProductDetails(p_name) {
+        try {
+            const response = await fetch('http://localhost:8888/dawnapi/getsubproducts');
+            const products = await response.json();
+
+            const container = document.getElementById('product-container');
+            const productSection = document.getElementById('product');
+
+            const selectedProduct = products.find(product => product.p_name === p_name);
+            if (!selectedProduct) {
+                console.error('Product not found:', p_name);
+                return;
+            }
+
+            const {
+                file_link, price, rating, description, p_description, contents, file_link1: sizechart, shipping
+            } = selectedProduct;
+
+            const parsedPrice = parseFloat(price);
+            const stars = Array(rating).fill('<li><i class="fa fa-star"></i></li>').join('');
+
+            container.innerHTML = `
+                <div class="col-lg-8">
+                    <div class="left-images">
+                        <img src="${file_link}" alt="Product Image">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="right-content">
+                        <h4>${p_name}</h4>
+                        <span class="price">$${parsedPrice.toFixed(2)}</span>
+                        <ul class="stars">
+                            ${stars}
+                        </ul>
+                        <span>${description}</span>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</p>
+                        </div>
+
+                        <div class="accordion-container">
+                            <div class="accordion">
+                                <div class="accordion-header" onclick="toggleAccordion(this)">
+                                    <h5>Product Description</h5>
+                                    <span class="toggle-icon" style="font-size: x-large;">+</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>${p_description}</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <div class="accordion-header" onclick="toggleAccordion(this)">
+                                    <h5>Contents</h5>
+                                    <span class="toggle-icon" style="font-size: x-large;">+</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>${contents}</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <div class="accordion-header" onclick="toggleAccordion(this)">
+                                    <h5>Size Chart</h5>
+                                    <span class="toggle-icon" style="font-size: x-large;">+</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <img src="${sizechart}" alt="Size Chart" style="max-width: 100%; height: auto;">
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <div class="accordion-header" onclick="toggleAccordion(this)">
+                                    <h5>Shipping Details</h5>
+                                    <span class="toggle-icon" style="font-size: x-large;">+</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>${shipping}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quantity-content">
+                            <div class="left-content">
+                                <h6>No. of Orders</h6>
+                            </div>
+                            <div class="right-content">
+                                <div class="quantity buttons-added">
+                                    <input type="button" value="-" class="minus" onclick="updateQuantity(-1, ${parsedPrice})">
+                                    <input type="number" step="1" min="1" value="1" title="Qty" class="input-text qty text">
+                                    <input type="button" value="+" class="plus" onclick="updateQuantity(1, ${parsedPrice})">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <h4 id="total-price">Total: $${parsedPrice.toFixed(2)}</h4>
+                            <div class="main-border-button"><a href="#">Add To Cart</a></div>
+                        </div>
+                    </div>
+                </div>`;
+
+            document.getElementById('products').style.display = 'none';
+            productSection.style.display = 'block';
+        } catch (error) {
+            console.error('Error showing product details:', error);
+        }
+    }
+
+    function navigateToProduct(p_name) {
+        history.pushState({ view: 'product', p_name }, '', '#product');
+        showProductDetails(p_name);
+    }
+
+    window.onpopstate = (event) => {
+        if (event.state && event.state.view === 'product') {
+            showProductDetails(event.state.p_name);
+        } else {
+            document.getElementById('product').style.display = 'none';
+            document.getElementById('products').style.display = 'block';
+        }
+    };
+
+    function toggleAccordion(header) {
+        const accordion = header.parentElement;
+        const isOpen = accordion.classList.contains('open');
+        document.querySelectorAll('.accordion').forEach(acc => acc.classList.remove('open'));
+        if (!isOpen) accordion.classList.add('open');
+    }
+
+    function updateQuantity(change, price) {
+        const quantityInput = document.querySelector('.qty');
+        let quantity = parseInt(quantityInput.value) + change;
+        if (quantity < 1) quantity = 1;
+        quantityInput.value = quantity;
+
+        const totalPriceElement = document.getElementById('total-price');
+        totalPriceElement.textContent = `Total: $${(quantity * price).toFixed(2)}`;
+    }
+
+    fetchProducts();
+</script>
+
+In the above code add a that when we clicking on the addtocart in the product-container then it should be redirect to the cart.html and should be shown there product-container of the particular product clicked and add this in the above code and give complete code
+
+for reference only for just reference
+products.html :
