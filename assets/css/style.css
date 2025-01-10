@@ -725,7 +725,7 @@ header
 .slide-track {
   display: flex;
   gap: 30px; /* Increased gap for better spacing */
-  animation: scroll 15s linear infinite;
+  animation: scroll 45s linear infinite;
 }
 
 .review {
