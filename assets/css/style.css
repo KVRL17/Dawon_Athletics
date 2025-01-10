@@ -713,6 +713,74 @@ header
   }
 }
 
+.sliderr {
+  overflow: hidden;
+  width: 90%;
+  padding: 2em 0;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slide-track {
+  display: flex;
+  gap: 30px; /* Increased gap for better spacing */
+  animation: scroll 15s linear infinite;
+}
+
+.review {
+  width: 270px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.review:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  background-color: #f0f8ff; /* Light blue hover color */
+}
+
+.review-header h3 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: #f39c12;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.review-text p {
+  font-size: 0.95em;
+  color: #34495e;
+  margin: 10px 0;
+  line-height: 1.5; /* Better line spacing */
+}
+
+.user-name {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
 @media (max-width: 767px) {
   .header-area .main-nav .logo {
     color: #1e1e1e;
