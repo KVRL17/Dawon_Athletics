@@ -909,7 +909,7 @@ banner
 
 .main-banner {
   border-bottom: 3px dotted #eee;
-  padding-top: 160px;
+  padding-top: 70px;
   padding-bottom: 30px;
 }
 
@@ -1423,6 +1423,119 @@ Kids
   background-color: #fff;
 }
 
+.fh5co-cover,
+.fh5co-hero {
+  position: relative;
+  height: 800px;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-cover,
+  .fh5co-hero {
+    height: 700px;
+  }
+}
+.fh5co-cover.fh5co-hero-2,
+.fh5co-hero.fh5co-hero-2 {
+  height: 600px;
+}
+.fh5co-cover.fh5co-hero-2 .fh5co-overlay,
+.fh5co-hero.fh5co-hero-2 .fh5co-overlay {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.fh5co-overlay {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.fh5co-cover {
+  background-size: cover;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-cover {
+    heifght: inherit;
+    padding: 3em 0;
+  }
+}
+.fh5co-cover .btn {
+  padding: 1em 2em;
+  opacity: .9;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+}
+.fh5co-cover.fh5co-cover_2 {
+  height: 600px;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-cover.fh5co-cover_2 {
+    heifght: inherit;
+    padding: 3em 0;
+  }
+}
+.fh5co-cover .desc {
+  top: 50%;
+  position: absolute;
+  width: 100%;
+  margin-top: -100px;
+  z-index: 2;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-cover .desc {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.fh5co-cover .desc h2 {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  line-height: 60px;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-cover .desc h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+.fh5co-cover .desc span {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.fh5co-cover .desc span i {
+  color: #DA1212;
+}
+.fh5co-cover .desc span a {
+  color: rgba(255, 255, 255, 0.8);
+}
+.fh5co-cover .desc span a:hover, .fh5co-cover .desc span a:focus {
+  color: #fff !important;
+}
+.fh5co-cover .desc span a.fh5co-site-name {
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
 
 #kids .owl-nav {
   text-align: center;
@@ -1524,7 +1637,7 @@ Explore
 
 #explore .left-content span {
   font-size: 14px;
-  color: #C00B0Baaa;
+  color: #C00B0B;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -1549,7 +1662,7 @@ Explore
 
 #explore .left-content p {
   font-size: 14px;
-  color: #C00B0Baaa;
+  color: #C00B0B;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -2071,7 +2184,7 @@ Single Product Page
 
 #product .right-content span {
   font-size: 14px;
-  color: #C00B0Baaa;
+  color: #C00B0B;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -2096,7 +2209,7 @@ Single Product Page
 
 #product .right-content p {
   font-size: 14px;
-  color: #C00B0Baaa;
+  color: #C00B0B;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -2215,6 +2328,7 @@ About Us Page
 .about-page-heading {
   margin-top: 100px;
   margin-bottom: 30px;
+
   background-image: url(../images/Images/DSC00507\ copy.jpg);
   background-position: center center;
   background-size: cover;
@@ -2242,7 +2356,7 @@ About Us Page
 
 .about-us .right-content span {
   font-size: 14px;
-  color: #C00B0Baaa;
+  color: #C00B0B;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -2267,7 +2381,7 @@ About Us Page
 
 .about-us .right-content p {
   font-size: 14px;
-  color: #C00B0Baaa;
+  color: #C00B0B;
   font-weight: 500;
   display: block;
   margin-top: 25px;

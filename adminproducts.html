@@ -556,8 +556,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="sizechart">Product Size Chart</label>
-                                <input type="file" id="sizechart" accept="image/*">
-                                <img id="current-sizechart" src="" alt="Current Size Chart" style="width: 100px; height: auto; display: none; margin-top: 10px;">
+                                <input type="text" id="sizechart">
+                                <!-- <img id="current-sizechart" src="" alt="Current Size Chart" style="width: 100px; height: auto; display: none; margin-top: 10px;"> -->
                             </div>
                             <div class="form-group">
                                 <label for="productshipping">Product Shipping</label>
@@ -610,17 +610,18 @@
     async function addProduct() {
         const formData = new FormData();
         const fileInput = document.getElementById("p_image").files[0];
-        const sizeChart = document.getElementById("sizechart").files[0];
+        // const sizeChart = document.getElementById("sizechart").files[0];
     
         formData.append("p_name", document.getElementById("p_name").value);
         formData.append("price", document.getElementById("price").value);
         formData.append("rating", document.getElementById("rating").value);
-        formData.append("short_description", document.getElementById("productdescription").value);
-        formData.append("detail_description", document.getElementById("productdetaildescription").value);
+        formData.append("description", document.getElementById("productdescription").value);
+        formData.append("p_description", document.getElementById("productdetaildescription").value);
         formData.append("contents", document.getElementById("productcontents").value);
         formData.append("shipping", document.getElementById("productshipping").value);
+        formData.append("sizechart", document.getElementById("sizechart").value);
         if (fileInput) formData.append("file", fileInput);
-        if (sizeChart) formData.append("size_chart", sizeChart);
+        // if (sizeChart) formData.append("size_chart", sizeChart);
     
         try {
             let url = `${apiBase}/addsubproduct`;
@@ -707,21 +708,22 @@
         document.getElementById("productdetaildescription").value = product.detail_description;
         document.getElementById("productcontents").value = product.contents;
         document.getElementById("productshipping").value = product.shipping;
+        document.getElementById("sizechart").value = product.shipping;
     
         const currentImage = document.getElementById("current-image");
         currentImage.src = product.file_link;
         currentImage.style.display = "block";
     
-        const currentSizeChart = document.getElementById("current-sizechart");
-        if (product.size_chart_link) {
-            currentSizeChart.src = product.size_chart_link;
-            currentSizeChart.style.display = "block";
-        } else {
-            currentSizeChart.style.display = "none";
-        }
+        // const currentSizeChart = document.getElementById("current-sizechart");
+        // if (product.size_chart_link) {
+        //     currentSizeChart.src = product.size_chart_link;
+        //     currentSizeChart.style.display = "block";
+        // } else {
+        //     currentSizeChart.style.display = "none";
+        // }
     
         document.getElementById("p_image").value = "";
-        document.getElementById("sizechart").value = "";
+        // document.getElementById("sizechart").value = "";
         alert(`Editing product: ${product.p_name}`);
     }
     
