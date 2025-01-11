@@ -715,7 +715,7 @@ header
 
 .sliderr {
   overflow: hidden;
-  width: 90%;
+  width: 100%;
   padding: 2em 0;
   background-color: whitesmoke;
   border-radius: 10px;
@@ -2381,10 +2381,10 @@ About Us Page
 
 .about-us .right-content p {
   font-size: 14px;
-  color: #C00B0B;
+  color: #2a2a2a;
   font-weight: 500;
   display: block;
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 .about-us .right-content ul {
