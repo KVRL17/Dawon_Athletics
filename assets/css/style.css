@@ -723,13 +723,14 @@ header
 }
 
 .slide-track {
+  width: 5000px;
   display: flex;
   gap: 30px; /* Increased gap for better spacing */
   animation: scroll 45s linear infinite;
 }
 
 .review {
-  width: 270px;
+  width: 500px;
   background: #ffffff;
   padding: 20px;
   border-radius: 12px;
