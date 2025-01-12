@@ -691,6 +691,92 @@ header
   background-color: #1e1e1e;
 }
 
+.main-dark-btn {
+  margin-top: 2%;
+  width: 100%;
+  display: inline-block;
+  border: 2px solid black; /* Black outline */
+  border-radius: 4px; /* Slightly rounded edges for a rectangular look */
+  padding: 5px 17px; /* Adjust padding for a rectangular shape */
+  background-color: transparent; /* Transparent background */
+  color: black; /* Black text */
+  text-align: center;
+  text-transform: uppercase; /* Text in uppercase */
+  font-weight: bold; /* Bold text */
+  font-size: 16px; /* Font size for readability */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+  width: auto; /* Ensure the width adjusts dynamically */
+}
+
+.main-dark-btn a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+}
+
+.main-dark-btn:hover {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .main-dark-btn {
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Smaller font size for mobile view */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-dark-btn {
+    padding: 8px 16px; /* Further adjust padding for very small screens */
+    font-size: 12px; /* Smaller font for narrow mobile devices */
+  }
+}
+
+.main-dark-btn {
+  margin-top: 2%;
+  display: block; /* Block display for full width */
+  border: 2px solid black; /* Black outline */
+  border-radius: 4px; /* Slightly rounded edges for a rectangular look */
+  padding: 5px; /* Padding for a rectangular shape */
+  background-color: transparent; /* Transparent background */
+  color: black; /* Black text */
+  text-align: center;
+  text-transform: uppercase; /* Text in uppercase */
+  font-weight: bold; /* Bold text */
+  font-size: 16px; /* Font size for readability */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+.main-dark-btn a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+  display: block; /* Ensure the link spans the full width */
+  width: 100%; /* Full width for the link */
+}
+
+.main-dark-btn:hover {
+  background-color: black; /* Black background on hover */
+  color: white; /* White text on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .main-dark-btn {
+    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Smaller font size for mobile view */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-dark-btn {
+    padding: 8px; /* Further adjust padding for very small screens */
+    font-size: 12px; /* Smaller font for narrow mobile devices */
+  }
+}
+
 .header-area.header-sticky {
   min-height: 80px;
 }
@@ -2031,10 +2117,11 @@ Products Page
 }
 
 #products .item .down-content {
+  padding: 5px 17px;
   padding-top: 20px;
   position: relative;
   z-index: 3;
-  background-color: #fff;
+  background-color: #f3f3f3;
 }
 
 #products .item .down-content h4 {
@@ -2055,6 +2142,7 @@ Products Page
   position: absolute;
   right: 0;
   top: 20px;
+  right: 5px;
 }
 
 #products .item .down-content ul.stars li {

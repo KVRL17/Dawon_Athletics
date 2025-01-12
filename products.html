@@ -204,11 +204,6 @@
                     <div class="col-lg-4">
                         <div class="item">
                             <div class="thumb">
-                                <div class="hover-content">
-                                    <ul>
-                                        <li><a href="#" onclick="navigateToProduct('${product.p_name}')"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
                                 <img src="${product.file_link}" alt="${product.p_name}">
                             </div>
                             <div class="down-content">
@@ -217,6 +212,9 @@
                                 <ul class="stars">
                                     ${filledStars}
                                 </ul>
+                                <div class="main-dark-btn" style="margin-top: 2%;">
+                            <span><a href="#" onclick="navigateToProduct('${product.p_name}')">View Product</a></span>
+                            </div>
                             </div>
                         </div>
                     </div>`;
