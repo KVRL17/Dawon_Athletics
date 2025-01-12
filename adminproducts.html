@@ -704,11 +704,11 @@
         document.getElementById("p_name").value = product.p_name;
         document.getElementById("price").value = product.price;
         document.getElementById("rating").value = product.rating;
-        document.getElementById("productdescription").value = product.short_description;
-        document.getElementById("productdetaildescription").value = product.detail_description;
+        document.getElementById("productdescription").value = product.description;
+        document.getElementById("productdetaildescription").value = product.p_description;
         document.getElementById("productcontents").value = product.contents;
         document.getElementById("productshipping").value = product.shipping;
-        document.getElementById("sizechart").value = product.shipping;
+        document.getElementById("sizechart").value = product.sizechart;
     
         const currentImage = document.getElementById("current-image");
         currentImage.src = product.file_link;
