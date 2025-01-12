@@ -367,6 +367,28 @@
             padding: 20px;
           }
         }
+
+        .nav-link {
+            cursor: pointer;
+            color: white;
+            background-color: #aeb2b4;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .nav-link.active {
+            background-color: #0b1015;
+            color: white;
+        }
+        .tab-content {
+            padding-top: 20px;
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+
       </style>
 
     </head>
@@ -413,106 +435,71 @@
     </header>
     <!-- ***** Header Area End ***** -->
 
-    <section id="guide" style="margin-top: 80px;">
-        <center><div class="section-header">Guide</div></center>
-        <div class="row1">
-          <!-- Guide Content -->
-          <div class="icon-box">
-            <h2>Size Guide</h2>
-            <ul class="list-group">
-              <li>Choose the right rope length based on your height.</li>
-              <li>Measure your current rope without handles for comparison.</li>
-              <li>Designed for advanced jumpers.</li>
-              <li>The rope weight might feel hefty initially.</li>
-              <li>Gradual upgrades in weighted ropes provide the best results.</li>
-            </ul>
-            
-      <!-- Table Section -->
-      <section>
-        <table>
-          <caption>Rope Length Table</caption>
-          <thead>
-            <tr>
-              <th>Body Size</th>
-              <th>Rope Length</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1.45m - 1.68m</td>
-              <td>Small (2.45m)</td>
-            </tr>
-            <tr>
-              <td>1.69m - 1.83m</td>
-              <td>Medium (2.60m)</td>
-            </tr>
-            <tr>
-              <td>1.84m - 2.10m</td>
-              <td>Large (2.75m)</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-  
+    <div class="container-fluid p-5" style="margin-top: 70px;">
+      <div class="row gx-5">
+          <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+              <div class="position-relative h-50">
+                  <img class="position-absolute w-100 h-100 rounded" src="image/guideimage.jpg" style="object-fit: cover;">
+              </div>
+              <br />
+              <div class="position-relative h-50">
+                  <img class="position-absolute w-100 h-100 rounded" src="https://dawonathletics.com/img/guide1.jpg" style="object-fit: cover;">
+              </div>
           </div>
+          <div class="col-lg-7">
+              <div class="mb-4">
+                  <!-- <h5 class="text-primary text-uppercase">Guide</h5> -->
+                  <h1 class="display-5 text-primary text-uppercase mb-0">Guide</h1>
+              </div>
+              <p class="text-body mb-2">Skipping is one of the easiest, most cost-effective, and efficient exercises you can do. It's excellent for heart and lung health, helps prevent weight gain, high blood pressure, diabetes, and certain types of cancer. According to the British Rope Skipping Association, skipping can “strengthen your immune system, regulate metabolism, and enhance overall health in a short period.”</p>
+              <p class="mb-2">Anyone, regardless of age or fitness level, can benefit from skipping. Beginners should start with a low intensity and gradually increase the challenge. However, if you have any joint or bone concerns, like knee or back problems, proceed with caution.</p>
+              <p class="mb-2">Before you start skipping, it’s important to warm up, cool down afterward, and stay hydrated throughout.</p>
+                <h4 class="text-body mb-2" style="margin-top: 15px ;">Skipping Technique Tips:</h4>
+                <p class="mb-2"> Keep your hands about the same distance from your body, and elbows should stay close. Bend your arms at a 45° angle.</p>
+                <p class="mb-2"> The rope should rotate using your wrists, not your elbows or shoulders.</p>
+                <p class="mb-2"> Maintain a straight posture, look ahead, keep your shoulders relaxed, and engage your core.</p>
+                <p class="mb-2"> Jump just a few centimeters off the ground and land softly on the balls of your feet with a slight knee bend to absorb the impact.</p>
+              <h4 class="text-body mb-2" style="margin-top: 15px ;">Skipping Benefits:</h4>
+              <p class="mb-2"><b> Affordable and Easy to Carry </b>: Skipping is one of the most affordable exercises, and it doesn’t need much space. After mastering the basic technique, you can challenge friends or try online skipping challenges.</p>
+              <p class="mb-2"><b> Effective Calorie Burner </b>: Skipping is an excellent calorie burner, with over 10 calories burned per minute. It boosts both heart rate and metabolism. In fact, skipping for an hour can burn up to 1600 calories, and just 10 minutes can burn as much as a 30-minute run.</p>
+              <p class="mb-2"><b> Reduces Foot and Ankle Injuries </b>: Skipping strengthens muscles in the feet, ankles, and knees, reducing the risk of injuries in these areas. The low-impact nature of the exercise makes it gentle on joints, offering a great alternative to treadmills and cross-trainers.</p>
+              <p class="mb-2"><b> Enhances Coordination </b>: Skipping helps develop coordination, agility, and balance. For children, it is especially beneficial as it helps them master motor skills needed for everyday tasks like tying shoes or buttoning clothes.</p>
+              <p class="mb-2"><b> Fitness </b>: Skipping provides a full-body workout that improves cardiovascular health, endurance, and breathing efficiency. It can also help improve skills for competitive sports like tennis, rugby, and netball.</p>
+              <p class="mb-2"><b> Supports Bone Health </b>: Skipping is a weight-bearing exercise that strengthens bones, which is especially beneficial for kids and can help prevent osteoporosis in adults by stimulating bone density.</p>
+              <p class="mb-2">Skipping has many wonderful benefits! It’s a fun and quick way to improve fitness, enhance coordination, and support bone health—all while burning calories. After learning all the benefits, I immediately bought a skipping rope and enjoy skipping with my kids. It’s a simple, enjoyable way to stay active as a family.</p>
+
+
+
+              <div class="rounded bg-dark p-5">
+                <ul class="nav nav-pills justify-content-between mb-3">
+                    <li class="nav-item w-50">
+                        <a class="nav-link text-uppercase text-center w-100 active" id="tab-size-guide">Size Guide</a>
+                    </li>
+                    <li class="nav-item w-50">
+                        <a class="nav-link text-uppercase text-center w-100" id="tab-policies">Our Policies</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="pills-1">
+                        <img src="image/guideimagee.png" style="height: 250px; width: fit-content;"/>
+                    </div>
+                    <div class="tab-pane" id="pills-2">
+                      <h4 class="text-light mb-4" style="color: #fff;">Return & Replacement Policy</h4>
+                      <p class="mb-2" style="color: #fff;">Items must be returned within 30 days of purchase. Products must be unused, unworn, and in original condition, with tags attached in their original packaging. Customized or personalized products are not eligible for return unless defective or damaged.</p>
+                      <p class="mb-2" style="color: #fff;">Visit our website and initiate a return request through your account. Pack the product securely in its original packaging and include proof of purchase (invoice or order confirmation). Drop off the return package at the nearest courier facility or schedule a pickup (available in select areas).</p>
+                      <p class="mb-2" style="color: #fff;">Products eligible for replacement include those with manufacturing defects or items damaged during transit. Replacements are subject to product availability. If a replacement is not possible, a full refund will be issued.</p>
           
-          <!-- Guide Image -->
-          <div class="image">
-            <img src="https://dawonathletics.com/img/guide1.jpg" alt="Jump rope guide">
+                      <h4 class="text-light mb-4" style="color: #fff;">Refund Policy</h4>
+                      <p class="mb-2" style="color: #fff;">Refunds are processed within 7-10 business days after the return is received and inspected. Refunds will be issued to the original payment method. For COD orders, refunds will be processed to your bank account (details will be required).</p>
+                      <p class="mb-2" style="color: #fff;">If any shipping charges were incurred during the purchase, they may not be refunded unless the return is due to our error (e.g., wrong item shipped).</p>
+                      <p class="mb-2" style="color: #fff;">Gift cards, e-gift vouchers, and discounted items are non-refundable unless defective.</p>
+                      <p class="mb-2" style="color: #fff;">Orders can be canceled within 24 hours of placement. After this period, orders may already be processed and shipped, making them ineligible for cancellation.</p>
+                      <p class="mb-2" style="color: #fff;">For further assistance, please contact our customer support team.</p>
+                  </div>
+                </div>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
-    <section class="policy-section">
-      <h2>Return, Replacement, and Refund Policy</h2>
-  
-      <h3>Return & Replacement Policy</h3>
-      <p><span class="highlight">1. Eligibility for Returns:</span></p>
-      <ul>
-        <li>Items must be returned within <strong>30 days</strong> of purchase.</li>
-        <li>Products must be unused, unworn, and in original condition, with tags attached in their original packaging.</li>
-        <li>Customized or personalized products are not eligible for return unless defective or damaged.</li>
-      </ul>
-      <center><button type="button" class="btn btn-primary" onclick="window.location.href='contact.html'">Contact Us</button></center>
-  
-      <p><span class="highlight">2. Process for Returns:</span></p>
-      <ul>
-        <li>Visit our website and initiate a return request through your account.</li>
-        <li>Pack the product securely in its original packaging and include proof of purchase (invoice or order confirmation).</li>
-        <li>Drop off the return package at the nearest courier facility or schedule a pickup (available in select areas).</li>
-      </ul>
-      <center><button type="button" class="btn btn-primary" onclick="window.location.href='contact.html'">Contact Us</button></center>
-      <p><span class="highlight">3. Replacement Policy:</span></p>
-      <ul>
-        <li>Products eligible for replacement include those with manufacturing defects or items damaged during transit.</li>
-        <li>Replacements are subject to product availability. If a replacement is not possible, a full refund will be issued.</li>
-      </ul>
-      <center><button type="button" class="btn btn-primary" onclick="window.location.href='contact.html'">Contact Us</button></center>
-      <h3>Refund Policy</h3>
-      <p><span class="highlight">1. Refund Timeline:</span></p>
-      <ul>
-        <li>Refunds are processed within <strong>7-10 business days</strong> after the return is received and inspected.</li>
-        <li>Refunds will be issued to the original payment method. For COD orders, refunds will be processed to your bank account (details will be required).</li>
-      </ul>
-  
-      <p><span class="highlight">2. Deduction:</span></p>
-      <ul>
-        <li>If any shipping charges were incurred during the purchase, they may not be refunded unless the return is due to our error (e.g., wrong item shipped).</li>
-      </ul>
-  
-      <p><span class="highlight">3. Non-Refundable Items:</span></p>
-      <ul>
-        <li>Gift cards, e-gift vouchers, and discounted items are non-refundable unless defective.</li>
-      </ul>
-      <center><button type="button" class="btn btn-primary" onclick="window.location.href='contact.html'">Contact Us</button></center>
-  
-      <p><span class="highlight">4. Cancellations:</span></p>
-      <ul>
-        <li>Orders can be canceled within <strong>24 hours</strong> of placement. After this period, orders may already be processed and shipped, making them ineligible for cancellation.</li>
-      </ul>
-      <center><button type="button" class="btn btn-primary" onclick="window.location.href='contact.html'">Contact Us</button></center>
-      <p class="footer-note"><strong>For further assistance, please contact our customer support team.</strong></p>
-    </section>
+      </div>
 
     <footer>
         <div class="container">
@@ -601,6 +588,24 @@
             });
         });
 
+    </script>
+
+
+
+    <script>
+        document.getElementById('tab-size-guide').addEventListener('click', function() {
+            document.getElementById('tab-size-guide').classList.add('active');
+            document.getElementById('tab-policies').classList.remove('active');
+            document.getElementById('pills-1').classList.add('active');
+            document.getElementById('pills-2').classList.remove('active');
+        });
+
+        document.getElementById('tab-policies').addEventListener('click', function() {
+            document.getElementById('tab-policies').classList.add('active');
+            document.getElementById('tab-size-guide').classList.remove('active');
+            document.getElementById('pills-2').classList.add('active');
+            document.getElementById('pills-1').classList.remove('active');
+        });
     </script>
 
   </body>
